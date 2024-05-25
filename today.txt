@@ -1,0 +1,97 @@
+###loop
+
+# list =[1,2,4,6,7,9]
+# i = 0
+# x =6
+# while (i<len(list)):
+#     if(list[i]==x):
+#         print("Found number at index",i)
+#         break
+       
+#     i = i+1
+
+
+
+#   #######range
+# liist =[1,2,4,6,7,9]
+# for el in liist:
+#     print(el) 
+
+
+# f= open("new.txt","x")
+# f.write("This is new file")
+
+# f.close
+
+
+
+###deleting file
+
+# import os
+# os.remove("new.txt")
+
+
+
+#####  OOP #############
+# class Student:
+#     faculty = bct
+#     age = 20
+
+# #create object                                 
+# s1 = Student()
+# print(s1)
+# print(s1.name)
+
+
+#########  Constructor
+# class Student:
+#     college = "sagarmatha"
+
+#     # def __init__(self):  #defeult constructor
+#     #     print("Create new student")
+
+#     def __init__(self,math,oop,Cpp): #paramaterized constructor
+#        # @staticmethod -- when self is not used
+#         self.math = math
+#         self.oop = oop 
+#         self.cpp = Cpp  
+
+#     def avg(self):
+#         average = (self.math + self.oop +self.cpp)/3
+#         print("average is",average)
+
+
+
+# s1 =Student(60,50,60)
+# print(s1.math ,s1.oop, s1.cpp)
+# print(s1.college)
+
+# s1.avg()
+
+
+class Account:
+    
+    def __init__(self,balance,account_no):
+        self.balance = balance
+        self.account = account_no
+
+    def debit(self,dbalance):
+       self.balance = self.balance - dbalance
+       print("Your debit amount is:",dbalance)
+
+       if self.balance == 0:
+           print("Your account is empty")
+
+       
+    def credit(self,cbalance):
+       self.balance = self.balance + cbalance
+       print("Your credit amount is:",cbalance) 
+       print("Your new amount is:",self.balance)  
+       
+
+a1=Account(30,1232343)
+
+a1.debit(30)
+a1.credit(50)
+
+
