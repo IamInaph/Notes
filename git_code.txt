@@ -1,0 +1,145 @@
+1. Yoga -> real time body posture detection.
+2. Plant disease detection.
+3. Real time location for safety.
+4. Object detection in real time.
+5. 
+
+
+
+
+prefetch, temp, %temp%, cleanmgr
+
+
+Configuring git    => in which account we are going to make changes
+
+git config --global user.name "IamInaph"
+~ => we are in root dir
+git config --global user.email "inough123@gmail.com"
+git config --list
+
+remote means github repo  & local means our machine
+
+git clone link
+cd foldername
+clear
+
+ls => list files
+to show hidden files too
+ls -a     a means all
+if there is .git file it means it is a github file means git is tracking this file.
+
+git status
+may be untracked, modified, staged, unmodified
+
+1. if the file is commited at least once & then we make changes in that file it is modified.
+2. if we create a new file which is not commited not even once then git cannot track that file rather it treats that file untracked.
+3. when we add these u or m files then they are staged. Now that file is ready to be commited.
+4. Finally we commit the file. Now these files becomes unchanged.
+
+
+git add filename
+git add .  => means add all changes or all changed files.
+git commit -m "commit message"
+
+Now it says your branch is ahead of origin main =>we are one commit ahead of github i.e, we cannot see all our files in github at the moment.
+  
+To show them in github  we push our files from local to remote
+
+git push origin main     => here origin is the default name of remote & main is the branch.
+
+
+
+cd ..  => to go outside the folder.
+mkdir dirname
+
+ls -a 
+git init   => to initialize git repository.
+ls -a
+
+
+how to upload our folders in github?
+
+first we create our repository in github.
+
+git remote add origin link   => remote means our github repo  & origin is name of that repo
+
+git remote -v  => to verify our remote
+
+git branch  => to check branch
+
+git branch -M main   => to rename our branch to main
+
+git push origin main
+or 
+git push -u origin main   => here u is a flag to set upstream  it means we want to do push operations in origin main only in future means we are creating shortcut for future
+now we can just say
+ git push   but this shortcut is for this repo only
+
+
+
+
+# Branch Commands
+
+git branch
+git branch -M main   =>(to rename branch to main)
+git checkout branch_name    =>(to navigate)
+git checkout -b new_branch_name   =>(to create new branch)
+
+git branch -d branch_name    =>(to delete branch)
+
+
+we cannot delete branch if we are in that branch, so first checkout to another branch and then delete.
+
+
+# Merging Code
+
+
+# Way 1
+
+git diff branch_name    =>(to comapre commits, branches, files & more)
+
+git merge branch_name    =>(to merge 2 branches)
+
+
+# Way 2
+
+Create a PR(Pull Request): from github  =>use new pull request option.
+
+after that we need to pull those changes from remote to local to see changes in local
+
+git pull origin main
+
+
+
+# Resolving Merge Conflicts:
+
+
+# Undoing Changes
+
+Case 1: staged changes
+
+git reset file_name
+git reset   => for all files
+
+
+Case 2: commited changes for one commit
+
+git reset HEAD~1
+
+
+Case 3: commited changes for many commits
+
+git reset hash_from_gitlog
+
+git reset --hard hash_from_gitlog   => removes commits from vsc too
+
+
+git log  => to see commits log history
+q for quit
+
+
+
+# Fork  => to make rough copy in our local of other remote repo
+
+for this we use github option fork
+
